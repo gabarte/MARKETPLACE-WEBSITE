@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">
+            <h1>XLO</h1>
+          </a> 
+            </div>
+            <input id="pesquisa" type="text" name="pesquisa" placeholder="" onkeyup="pesquisar()">
+      
+            <ul class="menu">
+              <li><a href="login.html">Entrar</a></li>
+              <li><a href="registro.html">Regitrar</a></li>
+          </ul>
+            <button>
+                <a href="minhaconta.html">
+            <svg href="minhaconta.html"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+              </svg>
+            </a>    
+        </button>
+        <div>
+        <button>
+            <a href="produto.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+            </a>
+            </button>
+            </div>
+      
+        </header>
+<!-- FIM DO HEADER -->
+
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.logo a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    color: #000;
+}
+button a {
+    color: #000;
+    background-color: white;
+    
+}
+.header button a {
+    border: none;
+}
+header{
+ 
+    width: 100%;
+    height: 70px;
+
+    background-color: #fcfcfc;
+
+    box-shadow: 0px 5px 20px #000; 
+
+    padding: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+  
+    top: 0;
+    z-index: 999;
+    justify-content: space-evenly;
+}
+
+.menu{
+    list-style: none;
+
+    display: flex;
+}
+
+.menu li a{
+    color: #000000;
+
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+
+    margin-left: 10px;
+
+}
+.menu li a:hover{
+    color: #657791;
+
+    display: block;
+    text-decoration: none;
+
+    background-color:#dadada ;
+
+    margin-left: 10px;
+}
+
+#pesquisa{
+    border-radius: 10px;
+}
+/* Fim do header */
+
+
+/* Começo do nav */
+.Container-Categoria {
+    background-color: #c7c7c7;
+    height: 80px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
+.Container-Categoria img {
+    max-width: 50px;
+}
+.Container-Categoria button {
+    background-color: #c7c7c7;
+    border-style: none;
+    height: 70px;
+}
+.Container-Categoria p {
+    color: rgb(70, 59, 73);
+    font-weight: bold;
+    font-size: 15px;
+}
+/* footer
+ */
+footer{
+    width: 100%;
+    height: 70px;
+    background-color: #fcfcfc;
+    box-shadow: 0px 5px 20px #000; 
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+    
+}
+
+h2 > a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    justify-content: space-evenly;
+    margin-left: 100px;
+}
+.LOGO {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+</style>
+<div class="Container-Categoria">
+    <button><img src="Imagens/CATEGORIA - TODAS.png"alt="TODAS"><P>Todas</P></button>
+    <button><img src="Imagens/CATEGORIA - CASAS.png" alt="CASAS"><P>Casas</P></button>
+    <button><img src="Imagens/CATEGORIA - CARROS.png" alt="CARROS"><P>Carros</P></button>
+    <button><img src="Imagens/CATEGORIA - ELETRONICOS.png" alt="ELETRONICOS"><P>Eletrônicos</P></button>
+    <button><img src="Imagens/CATEGORIA - PARA CASA.png" alt="PARA CASA"><P>Para casa</P></button>
+    <button><img src="Imagens/CATEGORIA - VESTUARIO.png" alt="VESTUARIO"><P>Vestuário</P></button>
+    <button><img src="Imagens/SERVIÇOS.png" alt="SERVIÇOS"><P>Serviços</P></button>
+</div>
+    <!-- FIM DO NAV -->
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XLO MARKETPLACE - HOME</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+<style>
+  .Container-Categoria {
+    background-color: #c7c7c7;
+    height: 80px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.Container-Categoria img {
+    max-width: 50px;
+}
+.Container-Categoria button {
+    background-color: #c7c7c7;
+    border-style: none;
+    height: 70px;
+}
+.Container-Categoria p {
+    color: rgb(70, 59, 73);
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+.item_body {
+    display: flex;
+}
+.container {
+    width: 1200px;
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "item item sidenav"
+    "item item sidenav"
+    "item item sidenav";
+    
+}
+.sidenav {
+    grid-area: "sidenav";
+    grid-row: sidenav;
+    border-radius: 20px;
+    max-width: 18em;
+}
+.item {
+    grid-area: "item";
+    max-width: 18em;
+    min-width: 12em;
+}
+.container-localizacao {
+    width: 1200px;
+    height: 50px;
+    margin-left: 180px;
+    margin-top: 27px;
+}
+.btn-group-vertical {
+    width: 290px;
+    margin-top: 20px;
+    
+}
+.sidenav img {
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.sidenav p, h5 {
+    color: #f66969;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.item p, h5 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.item img {
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+* {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .chat-container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .conversations {
+      width: 300px;
+      background-color: #f1f1f1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .conversations .conversation {
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .conversations .conversation .name {
+      font-weight: bold;
+    }
+
+    .conversations .conversation .preview {
+      color: #888;
+    }
+
+    .chat {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-header {
+      background-color: #a5a5a5;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .chat-messages {
+      flex-grow: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .chat-messages .message {
+      margin-bottom: 10px;
+    }
+
+    .chat-messages .message .sender {
+      font-weight: bold;
+    }
+
+    .chat-messages .message .content {
+      margin-top: 5px;
+    }
+
+    .chat-input {
+      padding: 20px;
+      display: flex;
+    }
+
+    .chat-input input[type="text"] {
+      flex-grow: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      outline: none;
+    }
+
+    .chat-input input[type="submit"] {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background-color: #075e54;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .chat-container {
+        flex-direction: column;
+      }
+
+      .conversations {
+        width: 100%;
+        height: 200px;
+      }
+
+      .chat {
+        flex-grow: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="conversations">
+      <div class="conversation">
+        <div class="name">Usuário 1</div>
+        <div class="preview">Última mensagem do Usuário 1</div>
+      </div>
+      <div class="conversation">
+        <div class="name">Usuário 2</div>
+        <div class="preview">Última mensagem do Usuário 2</div>
+      </div>
+      <!-- Adicione mais modelos de conversas aqui -->
+    </div>
+
+    <div class="chat">
+      <div class="chat-header">
+        <h2>Chat</h2>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <!-- Aqui você pode adicionar as mensagens do chat usando JavaScript -->
+      </div>
+      <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Digite sua mensagem...">
+        <input type="submit" value="Enviar" onclick="sendMessage()">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function sendMessage() {
+      var messageInput = document.getElementById("message-input");
+      var message = messageInput.value;
+
+      if (message.trim() !== "") {
+        var chatMessages = document.getElementById("chat-messages");
+        var newMessage = document.createElement("div");
+        newMessage.classList.add("message");
+
+        var sender = document.createElement("span");
+        sender.classList.add("sender");
+        sender.textContent = "Você:";
+        newMessage.appendChild(sender);
+
+        var content = document.createElement("p");
+        content.classList.add("content");
+        content.textContent = message;
+        newMessage.appendChild(content);
+
+        chatMessages.appendChild(newMessage);
+
+        messageInput.value = "";
+        messageInput.focus();
+
+        // Aqui você pode adicionar lógica para receber uma resposta do chat
+        // e adicionar outra mensagem usando uma função semelhante a sendMessage()
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+<footer>
+    <h2><a href="#">Dicas de Segurança</a></h2>
+    <h2><a href="#">Ajuda e contato</a></h2>
+    <h2><a href="#">Vender na XLO</a></h2>
+    <h2><a href="#">Mapa do Site</a></h2>
+
+    <div class="logoRedes">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div>
+
+
+
+</footer>

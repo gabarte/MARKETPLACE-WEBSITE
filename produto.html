@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Produto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <style>
+.logo a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    color: #000;
+}
+button a {
+    color: #000;
+    background-color: white;
+    
+}
+header{
+ 
+ width: 100%;
+ height: 70px;
+
+ background-color: #fcfcfc;
+
+ box-shadow: 0px 5px 20px #000; 
+
+ padding: 10px;
+
+ display: flex;
+
+ align-items: center;
+
+ flex-wrap: wrap;
+
+
+ top: 0;
+ z-index: 999;
+ justify-content: space-evenly;
+}
+
+.menu{
+    list-style: none;
+
+    display: flex;
+}
+
+.menu li a{
+    color: #000000;
+
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+
+    margin-left: 10px;
+
+}
+.menu li a:hover{
+    color: #657791;
+
+    display: block;
+    text-decoration: none;
+
+    background-color:#dadada ;
+
+    margin-left: 10px;
+}
+
+#pesquisa{
+    border-radius: 10px;
+}
+
+.Container-Categoria {
+  background-color: #c7c7c7;
+    height: 80px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    
+}
+.Container-Categoria img {
+    max-width: 50px;
+}
+.Container-Categoria button {
+    background-color: #c7c7c7;
+    border-style: none;
+    height: 70px;
+}
+.Container-Categoria p {
+    color: rgb(70, 59, 73);
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+        html {
+            overflow-x: hidden;
+        }
+
+        .collapsenavbar-collapse {
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .descrição {
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .img_produto {
+            border-radius: 40px;
+            border: solid;
+            border-color: rgba(0, 0, 0, 0.855);
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .título {
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .logo-img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .NL {
+            position: relative;
+            left: 280px;
+        }
+
+        .list-footer {
+            list-style: none;
+            color: rgb(130, 130, 130);
+        }
+
+        .lista {
+            padding-top: 75px;
+        }
+
+        .carrinho-fechado {
+            width: 0;
+            height: 95vh;
+            background-color: rgba(44, 43, 43, 0.8);
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 9999;
+            transition: width 0.3s ease-in;
+            overflow: hidden;
+        }
+
+        .carrinho-aberto {
+            width: 300px;
+        }
+
+        .fechar-carrinho {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .carrinho-conteudo {
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+        .card-img-top {
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .card-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #888;
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    margin-bottom: 10px;
+  }
+
+  .card-text:last-child {
+    margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+
+  .prod1{
+
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto ; 
+
+  }
+
+  .prod2{
+
+    grid-row: 1;
+    grid-column: 2;
+
+  }
+
+
+  .prod3{
+
+    grid-row: 2;
+    grid-column: 2;
+    position: relative;
+    top: -90%;
+
+  }
+
+  .prod4{
+
+    max-width: 85% ;
+    max-height: auto;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .vend{
+
+    font-size: 110%;
+    cursor: pointer;
+
+
+  }
+
+ .vend:hover{
+
+  font-size: 120%;
+  border-style: solid;
+
+ }
+
+ footer{
+    width: 100%;
+    height: 70px;
+
+    background-color: #fcfcfc;
+
+    box-shadow: 0px 5px 20px #000; 
+
+    padding: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    
+    margin-top: 50px;
+    
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 > a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    justify-content: space-evenly;
+    margin-left: 100px;
+
+
+}
+.card-img-top {
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .card-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #888;
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    margin-bottom: 10px;
+  }
+
+  .card-text:last-child {
+    margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+
+  .prod1{
+
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: auto ; 
+
+  }
+
+  .prod2{
+
+    grid-row: 1;
+    grid-column: 2;
+
+  }
+
+
+  .prod3{
+
+    grid-row: 2;
+    grid-column: 2;
+    position: relative;
+    top: -90%;
+
+  }
+
+  .prod4{
+
+    max-width: 85% ;
+    max-height: auto;
+    grid-row: 1;
+    grid-column: 1;
+    border-radius: 10px;
+  }
+
+  .vend{
+
+    font-size: 110%;
+    cursor: pointer;
+
+
+  }
+
+ .vend:hover{
+
+  font-size: 120%;
+  border-style: solid;
+
+ } 
+
+  
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html">
+            <h1>XLO</h1>
+          </a> 
+            </div>
+            <input id="pesquisa" type="text" name="pesquisa" placeholder="" onkeyup="pesquisar()">
+      
+            <ul class="menu">
+              <li><a href="login.html">Entrar</a></li>
+              <li><a href="registro.html">Regitrar</a></li>
+          </ul>
+            <button>
+                <a href="minhaconta.html">
+            <svg href="minhaconta.html"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+              </svg>
+            </a>    
+        </button>
+        <div>
+        <button>
+            <a href="produto.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+            </a>
+            </button>
+            </div>
+      
+        </header>
+    <div class="Container-Categoria">
+        <button><img src="Imagens/CATEGORIA - TODAS.png"alt="TODAS"><P>Todas</P></button>
+        <button><img src="Imagens/CATEGORIA - CASAS.png" alt="CASAS"><P>Casas</P></button>
+        <button><img src="Imagens/CATEGORIA - CARROS.png" alt="CARROS"><P>Carros</P></button>
+        <button><img src="Imagens/CATEGORIA - ELETRONICOS.png" alt="ELETRONICOS"><P>Eletrônicos</P></button>
+        <button><img src="Imagens/CATEGORIA - PARA CASA.png" alt="PARA CASA"><P>Para casa</P></button>
+        <button><img src="Imagens/CATEGORIA - VESTUARIO.png" alt="VESTUARIO"><P>Vestuário</P></button>
+        <button><img src="Imagens/SERVIÇOS.png" alt="SERVIÇOS"><P>Serviços</P></button>
+    </div>
+
+    <div id="carrinho" class="carrinho-fechado">
+        <div class="fechar-carrinho" onclick="fecharCarrinho()">Fechar</div>
+        <div class="carrinho-conteudo">
+            <h4>Seu Carrinho</h4>
+           <div class="prod1" >  
+            <p class="prod2">Nome do anúncio</p>
+            <p class="prod3">R$: 999,99</p>
+            <img class="prod4" src="Imagens/BACKGROUND CINZA.png" alt="">
+        </div>
+        <div class="prod1" >  
+            <p class="prod2">Nome do anúncio</p>
+            <p class="prod3">R$: 999,99</p>
+
+            <img class="prod4" src="Imagens/BACKGROUND CINZA.png" alt="">
+        </div>
+        <div class="prod1" >  
+            <p class="prod2">Nome do anúncio</p>
+            <p class="prod3">R$: 999,99</p>
+
+            <img class="prod4" src="Imagens/BACKGROUND CINZA.png" alt="">
+        </div>
+        
+            <P>Valor dos itens selecionados Total R$: 2999,97</P>
+            <!-- <p>Total  R$: 15.000</p> -->
+            <p class="vend"><a href="chat.html">Mensagem aos Vendedores</p></a>
+        </div>
+    </div>
+    <section>
+        <div class="barraLateral">
+
+        </div>
+        <main>
+
+
+        </main>
+    </section>
+
+
+    <main class="mt-5">
+        <h2 class="título mb-5">Página do Produto</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="Imagens/BACKGROUND CINZA.png" class="card-img-top img_produto" alt="Foto do Produto">
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-body descrição">
+                        <h5 class="card-title T_produto">Nome do anúncio</h5>
+                        <hr>
+                        <h6 class="card-subtitle mb-2 text-muted">R$ 999,99</h6>
+                        <p class="card-text">Descrição do Produto</p>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed urna sed nisi pulvinar sagittis. 
+                            Suspendisse tristique tortor ac eros mollis accumsan. Nullam finibus vulputate nisi ac cursus. In purus urna, 
+                            molestie quis erat fermentum, luctus lacinia nisi. Nulla tristique felis et arcu dapibus, at pulvinar est ultricies.
+                            Mauris et eleifend lectus.</p>
+                        <p class="card-text">Classificação do vendedor: ★★★★★</p>
+                        <button class="btn btn-primary btn-adicionar-carrinho" onclick="abrirCarrinho()">Adicionar ao
+                            Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+      <h2><a href="#">Dicas de Segurança</a></h2>
+      <h2><a href="#">Ajuda e contato</a></h2>
+      <h2><a href="#">Vender na XLO</a></h2>
+      <h2><a href="#">Mapa do Site</a></h2>
+  
+      <div class="logoRedes">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+      </div>
+  
+  </footer>
+
+    
+    
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+        function abrirCarrinho() {
+            document.getElementById("carrinho").classList.add("carrinho-aberto");
+        }
+
+        function fecharCarrinho() {
+            document.getElementById("carrinho").classList.remove("carrinho-aberto");
+        }
+    </script>
+</body>
+
+</html>

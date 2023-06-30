@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Minha Conta</title>
+</head>
+<body>
+  <header>
+      <style>
+        *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  width: 100%;
+  height: 70px;
+  background-color: #fcfcfc;
+  box-shadow: 0px 5px 20px #000; 
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  top: 0;
+  z-index: 999;
+  justify-content: space-evenly;
+}
+
+.menu{
+  list-style: none;
+
+  display: flex;
+}
+
+.menu li a{
+  color: #000000;
+
+  display: block;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
+
+  margin-left: 10px;
+
+}
+.menu li a:hover{
+    color: #657791;
+
+    display: block;
+    text-decoration: none;
+
+    background-color:#dadada ;
+
+    margin-left: 10px;
+}
+
+#pesquisa{
+  border-radius: 10px;
+}
+/* Fim do header */
+/* Começo do nav */
+.Container-Categoria {
+  background-color: #c7c7c7;
+  height: 80px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  
+}
+.Container-Categoria img {
+  max-width: 50px;
+}
+.Container-Categoria button {
+  background-color: #d6d6d600;
+  border-style: none;
+  height: 70px;
+}
+.Container-Categoria p {
+  color: rgb(70, 59, 73);
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+footer{
+  width: 100%;
+  height: 80px;
+
+  background-color: #fcfcfc;
+
+  box-shadow: 0px 5px 20px #000; 
+
+  padding: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+  
+  
+}
+
+h2 > a{
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+  justify-content: space-evenly;
+  margin-left: 100px;
+
+
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fcfcfc;
+ 
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: top;
+  
+}
+.container li{
+  cursor: pointer;
+  list-style: none;
+}
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 25px;
+}
+
+.options {
+  border-radius: 1ch;
+  background-color: #d6d6d631;
+  list-style: none;
+  text-align: left;
+  padding: 5px;
+  margin: 5px;
+  height: 230px;
+  
+}
+
+.options li {
+  transition: transform 0.5s;
+  margin: 10px 0;
+  
+}
+
+.options li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.options li:hover {
+  background-color: rgba(56, 56, 56, 0.062);
+  transform: translateX(20px);
+}
+.logo a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    color: #000;
+}
+button a {
+    color: #000;
+    background-color: white;
+    
+}
+
+      </style>
+      <div class="logo"><a href="index.html">
+      <h1>XLO</h1>
+    </a> 
+      </div>
+      <input id="pesquisa" type="text" name="pesquisa" placeholder="" onkeyup="pesquisar()">
+
+      <ul class="menu">
+        <li><a href="login.html">Entrar</a></li>
+        <li><a href="registro.html">Regitrar</a></li>
+    </ul>
+      <button>
+          <a href="minhaconta.html">
+      <svg href="minhaconta.html"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+        </svg>
+      </a>    
+  </button>
+  <div>
+  <button>
+      <a href="produto.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg>
+      </a>
+      </button>
+      </div>
+
+  </header>
+  <div class="Container-Categoria">
+    <button><img src="Imagens/CATEGORIA - TODAS.png"alt="TODAS"><P>Todas</P></button>
+    <button><img src="Imagens/CATEGORIA - CASAS.png" alt="CASAS"><P>Casas</P></button>
+    <button><img src="Imagens/CATEGORIA - CARROS.png" alt="CARROS"><P>Carros</P></button>
+    <button><img src="Imagens/CATEGORIA - ELETRONICOS.png" alt="ELETRONICOS"><P>Eletrônicos</P></button>
+    <button><img src="Imagens/CATEGORIA - PARA CASA.png" alt="PARA CASA"><P>Para casa</P></button>
+    <button><img src="Imagens/CATEGORIA - VESTUARIO.png" alt="VESTUARIO"><P>Vestuário</P></button>
+    <button><img src="Imagens/SERVIÇOS.png" alt="SERVIÇOS"><P>Serviços</P></button>
+</div>
+
+  <div class="container">
+    <img class="profile-image" src="https://cdn-icons-png.flaticon.com/256/711/711769.png" alt="">
+    <h5>Nome do Usuário</h5>
+  </div>
+  <section>
+    <div class="barraLateral">
+    </div>
+    <main>
+
+    </main>
+</section>
+
+  <ul class="options">
+    <li><a href="cadastro_produto.html">Fazer Anúncio</a></li>
+    <li><a href="#">Meus Anúncios</a></li>
+    <li><a href="#">Minhas Compras</a></li>
+    <li><a href="chat.html">Mensagens</a></li>
+    <li><a href="#">Favoritos</a></li>
+    <li><a href="#">Configuração</a></li>
+     
+  </ul>
+  <footer>
+    <h2><a href="#">Dicas de Segurança</a></h2>
+    <h2><a href="#">Ajuda e contato</a></h2>
+    <h2><a href="#">Vender na XLO</a></h2>
+    <h2><a href="#">Mapa do Site</a></h2>
+
+    <div class="logoRedes">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+    </div>
+
+</footer>
+  
+
+</body>
+</html>
